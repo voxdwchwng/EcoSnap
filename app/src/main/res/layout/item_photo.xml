@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp"
+    app:strokeWidth="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- 1:1 Aspect Ratio Image View -->
+        <ImageView
+            android:id="@+id/ivTrashPhoto"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="Ảnh rác thải"
+            android:scaleType="centerCrop"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@android:drawable/ic_menu_report_image" />
+
+        <!-- Time Overlay at Bottom -->
+        <TextView
+            android:id="@+id/tvCapturedTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#99000000"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="4dp"
+            android:textColor="@android:color/white"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="@id/ivTrashPhoto"
+            app:layout_constraintEnd_toEndOf="@id/ivTrashPhoto"
+            app:layout_constraintStart_toStartOf="@id/ivTrashPhoto"
+            tools:text="08/09/2026 18:30" />
+
+        <!-- Delete Photo Button (Top-Right) -->
+        <ImageButton
+            android:id="@+id/btnDeletePhoto"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_margin="6dp"
+            android:background="@drawable/bg_circle_translucent_red"
+            android:contentDescription="Xóa ảnh"
+            android:padding="6dp"
+            android:src="@drawable/ic_delete"
+            app:tint="@android:color/white"
+            app:layout_constraintEnd_toEndOf="@id/ivTrashPhoto"
+            app:layout_constraintTop_toTopOf="@id/ivTrashPhoto" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

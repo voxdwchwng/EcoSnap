@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">EcoSnap</string>
+    <string name="filter_all">Tất cả</string>
+    <string name="filter_bin_normal">Thùng chưa đầy</string>
+    <string name="filter_bin_full">Thùng đầy tràn</string>
+    <string name="filter_trash_spill">Rác rơi vãi</string>
+</resources>
